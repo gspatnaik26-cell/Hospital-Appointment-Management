@@ -1,0 +1,768 @@
+
+/* ==============================
+   MEDICARE HOSPITAL WEBSITE
+   Main Stylesheet
+================================= */
+
+:root {
+    --primary: #087f8c;
+    --primary-dark: #075d68;
+    --secondary: #e8f7f7;
+    --accent: #f2b84b;
+    --dark: #173b45;
+    --text: #53666d;
+    --white: #ffffff;
+    --background: #f7fbfc;
+    --border: #dce8ea;
+    --shadow: 0 12px 35px rgba(18, 69, 78, 0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: var(--primary-dark);
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.container {
+    width: min(1140px, 90%);
+    margin: auto;
+}
+
+section {
+    scroll-margin-top: 85px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 15px;
+    z-index: 1000;
+    background: var(--dark);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 5px;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* HEADER */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    min-height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.logo > span:last-child {
+    color: var(--primary);
+}
+
+.logo-icon {
+    color: var(--primary);
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.main-nav a:hover {
+    color: var(--primary);
+}
+
+.main-nav .nav-button {
+    color: white;
+    background: var(--primary);
+    padding: 12px 19px;
+    border-radius: 7px;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(120deg, #eaf8f8, #f8fcfc);
+    padding: 75px 0 90px;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    color: var(--dark);
+    font-size: clamp(38px, 5vw, 57px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero-text > p {
+    max-width: 530px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 7px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    color: var(--primary-dark);
+    border-color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 45px;
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stats strong {
+    font-size: 25px;
+    color: var(--dark);
+}
+
+.hero-stats span {
+    font-size: 12px;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image > img {
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 25px;
+    left: -25px;
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+.floating-icon {
+    font-size: 27px;
+    color: var(--primary);
+}
+
+.floating-card strong {
+    color: var(--dark);
+}
+
+.floating-card p {
+    font-size: 12px;
+}
+
+/* COMMON SECTIONS */
+
+.section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2,
+.about-content h2,
+.appointment-info h2 {
+    font-size: 35px;
+    line-height: 1.25;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+/* SERVICES */
+
+.services-section {
+    background: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.service-card:hover,
+.doctor-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+}
+
+.service-card > img {
+    height: 210px;
+}
+
+.service-info {
+    padding: 24px;
+}
+
+.service-icon {
+    display: inline-grid;
+    place-items: center;
+    background: var(--secondary);
+    color: var(--primary);
+    width: 43px;
+    height: 43px;
+    border-radius: 9px;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.service-info h3,
+.doctor-info h3 {
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+/* ABOUT */
+
+.about-section {
+    background: var(--background);
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.about-image img {
+    height: 420px;
+    border-radius: 15px;
+}
+
+.about-content h2 {
+    font-size: 37px;
+}
+
+.about-list {
+    list-style: none;
+    margin: 24px 0 28px;
+}
+
+.about-list li {
+    margin: 10px 0;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+/* DOCTORS */
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.doctor-card {
+    overflow: hidden;
+    border-radius: 13px;
+    border: 1px solid var(--border);
+    background: white;
+    transition: 0.3s;
+}
+
+.doctor-card > img {
+    height: 270px;
+    object-position: center top;
+}
+
+.doctor-info {
+    padding: 22px;
+}
+
+.doctor-info .specialty {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.doctor-info > p:not(.specialty) {
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.doctor-link {
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* APPOINTMENT */
+
+.appointment-section {
+    background: linear-gradient(120deg, #eaf8f8, #f7fbfc);
+}
+
+.appointment-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 55px;
+    align-items: start;
+}
+
+.appointment-info {
+    padding-top: 35px;
+}
+
+.appointment-info > p {
+    margin: 20px 0 35px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 23px;
+}
+
+.contact-item > span {
+    background: white;
+    color: var(--primary);
+    padding: 12px;
+    border-radius: 9px;
+    font-size: 21px;
+}
+
+.contact-item strong {
+    color: var(--dark);
+}
+
+.contact-item p {
+    font-size: 14px;
+}
+
+.appointment-form-card {
+    padding: 35px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.appointment-form-card h3 {
+    color: var(--dark);
+    font-size: 24px;
+}
+
+.form-description {
+    font-size: 13px;
+    margin-bottom: 23px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    flex: 1;
+    min-width: 0;
+}
+
+.form-row {
+    display: flex;
+    gap: 17px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #cbdadd;
+    background: #fbfdfd;
+    color: var(--dark);
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 3px solid rgba(8, 127, 140, 0.2);
+    border-color: var(--primary);
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px 0 22px;
+}
+
+.form-checkbox input {
+    margin-top: 5px;
+    width: 17px;
+    height: 17px;
+    accent-color: var(--primary);
+}
+
+.form-checkbox label {
+    font-size: 12px;
+}
+
+.submit-btn {
+    width: 100%;
+    border: none;
+}
+
+.form-status {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--primary-dark);
+}
+
+.privacy-note {
+    margin-top: 18px;
+    font-size: 11px;
+    color: var(--text);
+}
+
+/* CTA */
+
+.cta-section {
+    padding: 55px 0;
+    background: var(--primary-dark);
+}
+
+.cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.cta-content h2 {
+    color: white;
+    font-size: 30px;
+}
+
+.cta-content p {
+    color: #d8eeee;
+}
+
+.btn-light {
+    background: white;
+    color: var(--primary-dark);
+}
+
+.btn-light:hover {
+    background: var(--secondary);
+}
+
+/* FOOTER */
+
+.site-footer {
+    background: #102f38;
+    color: #d2e1e4;
+    padding-top: 55px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    color: white;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.footer-container h2 {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.footer-container p,
+.footer-container a {
+    font-size: 13px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #d2e1e4;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #31515a;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+}
+
+/* ACCESSIBILITY */
+
+:focus-visible {
+    outline: 3px solid #d28b00;
+    outline-offset: 3px;
+}
+
+::selection {
+    background: var(--primary);
+    color: white;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .main-nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content,
+    .about-container,
+    .appointment-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .services-grid,
+    .doctors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .appointment-info {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-image > img {
+        height: 300px;
+    }
+
+    .floating-card {
+        left: 5px;
+        bottom: 10px;
+    }
+
+    .services-grid,
+    .doctors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .appointment-form-card {
+        padding: 22px;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        gap: 12px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
