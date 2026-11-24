@@ -100,7 +100,7 @@ Push:
 ```bash
 git push -u origin feature/accessible-hospital-website
 ```
-
+//git
 Create a Pull Request on GitHub from the feature branch into main.
 
 ## Important Note
@@ -109,7 +109,7 @@ This is an academic front-end demonstration. The appointment form does not conne
 
 ## Author
 
-Student Name: Your Name
+Student Name GOURI SANKAR PATNAIK
 
 Experiment: Lab Experiment 2
 
