@@ -109,8 +109,8 @@ This is an academic front-end demonstration. The appointment form does not conne
 
 ## Author
 
-Student Name: Your Name
+Student Name: GOURI SANKAR PATNAIK
 
-Experiment: Lab Experiment 2
+Experiment: Lab Experiment 2, FSFE
 
 Subject: Web Development
